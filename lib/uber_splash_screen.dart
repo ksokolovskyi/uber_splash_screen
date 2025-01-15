@@ -43,12 +43,14 @@ class UberSplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        _Background(controller: controller),
-        _Foreground(controller: controller),
-      ],
+    return RepaintBoundary(
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          _Background(controller: controller),
+          _Foreground(controller: controller),
+        ],
+      ),
     );
   }
 }
