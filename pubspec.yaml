@@ -1,0 +1,53 @@
+name: uber_splash_screen
+description: "Uber Splash Screen"
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: '>=3.4.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.2
+  flutter_native_splash: ^2.4.4
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/built_with_flutter.png
+
+flutter_launcher_icons:
+  image_path: 'assets/images/icon.png'
+  remove_alpha_ios: true
+  min_sdk_android: 21
+  adaptive_icon_background: '#000000'
+  adaptive_icon_foreground: 'assets/images/icon.png'
+  adaptive_icon_foreground_inset: 25
+
+  ios: true
+  android: true
+  web:
+    generate: false
+  windows:
+    generate: false
+  macos:
+    generate: false
+
+flutter_native_splash:
+  color: '#020002'
+  image: 'assets/images/logo.png'
+
+  android_12:
+    image: 'assets/images/logo_android_12.png'
+    color: '#020002'
+
+  ios: true
+  android: true
+  web: false
